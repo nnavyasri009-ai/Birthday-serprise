@@ -1,0 +1,685 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(to bottom,#010814,#021a3d,#063b82);
+
+    color:white;
+
+}
+
+/* =========================
+   STARS
+========================= */
+
+#stars{
+
+    position:fixed;
+    inset:0;
+    z-index:0;
+
+}
+
+.star{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:.2;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,30,.25);
+
+    z-index:1;
+
+}
+
+/* =========================
+   MOON
+========================= */
+
+.moon{
+
+    position:fixed;
+
+    top:50px;
+
+    right:70px;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    background:#FFF9D6;
+
+    box-shadow:
+
+    0 0 20px #fff,
+
+    0 0 60px #fff4a5,
+
+    0 0 120px rgba(255,255,220,.8);
+
+    animation:moonGlow 4s infinite alternate;
+
+    cursor:pointer;
+
+    z-index:100;
+
+}
+
+@keyframes moonGlow{
+
+from{
+
+box-shadow:
+0 0 20px #fff,
+0 0 60px #fff4a5;
+
+}
+
+to{
+
+box-shadow:
+0 0 40px #fff,
+0 0 100px #fff4a5,
+0 0 150px rgba(255,255,220,.8);
+
+}
+
+}
+
+/* =========================
+   SHOOTING STAR
+========================= */
+
+.shooting-star{
+
+    position:fixed;
+
+    width:3px;
+
+    height:120px;
+
+    background:linear-gradient(white,transparent);
+
+    transform:rotate(45deg);
+
+    animation:shoot 1.5s linear;
+
+    z-index:2;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+transform:translate(0,0) rotate(45deg);
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(-700px,700px) rotate(45deg);
+opacity:0;
+
+}
+
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.cinema{
+
+    position:relative;
+
+    z-index:10;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* =========================
+   SCENE
+========================= */
+
+#scene{
+
+    font-size:48px;
+
+    width:85%;
+
+    max-width:900px;
+
+    opacity:0;
+
+    line-height:1.7;
+
+    transition:opacity 1.5s;
+
+}
+
+/* =========================
+   HEART
+========================= */
+
+#heartSection{
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#heart{
+
+    font-size:190px;
+
+    animation:heartbeat 1.2s infinite;
+
+    filter:drop-shadow(0 0 25px #ff4d6d);
+
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+}
+
+#heartSection h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:82px;
+
+}
+
+#heartSection h2{
+
+    font-size:38px;
+
+    color:#FFD700;
+
+}
+
+/* =========================
+   TYPING
+========================= */
+
+#typingContainer{
+
+    display:none;
+
+    margin-top:40px;
+
+    width:80%;
+
+    max-width:900px;
+
+    font-size:28px;
+
+    line-height:2;
+
+}
+
+#cursor{
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:0;
+
+}
+
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+#signature{
+
+    display:none;
+
+    margin-top:50px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+}
+
+/* =========================
+   ENDING
+========================= */
+
+#ending{
+
+    display:none;
+
+    margin-top:35px;
+
+    font-size:28px;
+
+    color:#FFD700;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#replay{
+
+    display:none;
+
+    margin-top:40px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#ff4d6d;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#replay:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* =========================
+   SECRET
+========================= */
+
+#secret{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.95);
+
+    z-index:999;
+
+}
+
+.secret-card{
+
+    width:700px;
+
+    max-width:90%;
+
+    background:#09172e;
+
+    border-radius:25px;
+
+    padding:45px;
+
+}
+
+.secret-card h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+#secretMessage{
+
+    font-size:28px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.moon{
+
+width:90px;
+height:90px;
+right:20px;
+top:25px;
+
+}
+
+#scene{
+
+font-size:28px;
+
+}
+
+#heart{
+
+font-size:120px;
+
+}
+
+#heartSection h1{
+
+font-size:48px;
+
+}
+
+#heartSection h2{
+
+font-size:24px;
+
+}
+
+#typingContainer{
+
+font-size:20px;
+
+}
+
+#signature{
+
+font-size:38px;
+
+}
+
+#ending{
+
+font-size:20px;
+
+}
+
+.secret-card{
+
+padding:25px;
+
+}
+
+#secretMessage{
+
+font-size:20px;
+
+}
+
+}
+
+/* ==========================
+   FIREWORKS
+========================== */
+
+.firework{
+
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:explode 1s forwards;
+
+}
+
+@keyframes explode{
+
+0%{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(var(--x),var(--y)) scale(0);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================
+   PETALS
+========================== */
+
+.petal{
+
+position:fixed;
+
+font-size:25px;
+
+animation:fall linear forwards;
+
+pointer-events:none;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-80px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(720deg);
+
+}
+
+}
+
+/* ==========================
+   BALLOONS
+========================== */
+
+.balloon{
+
+position:fixed;
+
+font-size:45px;
+
+animation:floatUp linear forwards;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:translateY(110vh);
+
+}
+
+100%{
+
+transform:translateY(-150px);
+
+}
+
+}
+
+/* ==========================
+   SUNRISE
+========================== */
+
+body.sunrise{
+
+animation:sunriseSky 8s forwards;
+
+}
+
+@keyframes sunriseSky{
+
+0%{
+
+background:linear-gradient(to bottom,#010814,#021a3d,#063b82);
+
+}
+
+40%{
+
+background:linear-gradient(to bottom,#15295b,#5b6bb3,#f59e73);
+
+}
+
+70%{
+
+background:linear-gradient(to bottom,#7cc8ff,#ffd27d,#fff4c4);
+
+}
+
+100%{
+
+background:linear-gradient(to bottom,#87CEEB,#ffe29a,#fff8d6);
+
+}
+
+}
+
+/* ==========================
+   FINAL QUOTE
+========================== */
+
+#lastQuote{
+
+display:none;
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:42px;
+
+max-width:900px;
+
+text-align:center;
+
+line-height:1.8;
+
+opacity:0;
+
+transition:2s;
+
+font-family:'Great Vibes',cursive;
+
+color:white;
+
+text-shadow:0 0 20px rgba(255,255,255,.8);
+
+z-index:500;
+
+}

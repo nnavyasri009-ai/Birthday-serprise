@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#02142d,#062b57,#0b4ea2);
+    overflow:hidden;
+    color:white;
+    height:100vh;
+}
+
+/* Background Overlay */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,30,.25);
+    z-index:0;
+}
+
+/* Hero */
+
+.hero{
+    position:relative;
+    z-index:2;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+/* Moon */
+
+.moon{
+    position:absolute;
+    top:60px;
+    right:80px;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#f4f1d0;
+    box-shadow:0 0 60px rgba(255,255,220,.8);
+}
+
+/* Date */
+
+.date{
+    letter-spacing:4px;
+    font-size:18px;
+    opacity:.8;
+    margin-bottom:20px;
+}
+
+/* Heading */
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:85px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+/* Subtitle */
+
+.subtitle{
+    max-width:650px;
+    font-size:20px;
+    line-height:2;
+    opacity:.9;
+}
+
+/* Gift */
+
+.gift{
+    margin-top:60px;
+    font-size:95px;
+    cursor:pointer;
+    animation:float 2.5s ease-in-out infinite;
+    transition:.3s;
+}
+
+.gift:hover{
+    transform:scale(1.15);
+}
+
+.click{
+    margin-top:15px;
+    opacity:.8;
+    animation:blink 1.5s infinite;
+}
+
+/* Stars */
+
+#stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:1;
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+/* Animations */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:.3;
+    }
+
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:58px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .moon{
+        width:90px;
+        height:90px;
+        top:30px;
+        right:30px;
+    }
+
+    .gift{
+        font-size:70px;
+    }
+
+}

@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#02142d,#062b57,#0b4ea2);
+    color:white;
+    overflow:hidden;
+    height:100vh;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,40,.25);
+}
+
+#stars{
+    position:fixed;
+    inset:0;
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+.moon{
+    position:absolute;
+    top:60px;
+    right:70px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#f5f5dc;
+    box-shadow:0 0 60px rgba(255,255,220,.8);
+}
+
+.gallery-page{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    margin-bottom:30px;
+}
+
+.photo-card{
+
+    width:380px;
+    height:500px;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+    animation:fadePhoto 3s;
+
+}
+
+.photo-card img{
+
+    width:100%;
+    height:420px;
+
+    object-fit:cover;
+
+}
+
+#caption{
+
+    color:#222;
+
+    padding:15px;
+
+    font-size:18px;
+
+}
+
+#continueBtn{
+
+    margin-top:35px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#3797F0;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:none;
+
+}
+
+@keyframes twinkle{
+
+from{opacity:.2;}
+to{opacity:1;}
+
+}
+
+@keyframes fadePhoto{
+
+0%{
+opacity:0;
+transform:scale(.95);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+}
+
+}
