@@ -8,8 +8,9 @@ body{
     font-family:'Poppins',sans-serif;
     background:linear-gradient(to bottom,#02142d,#062b57,#0b4ea2);
     color:white;
-    overflow:hidden;
-    height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    min-height:100vh;
 }
 
 .overlay{
@@ -44,7 +45,8 @@ body{
 .letter-page{
     position:relative;
     z-index:2;
-    height:100vh;
+    .letter-page{
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -97,7 +99,8 @@ h1{
 
 .paper.open{
 
-    height:75vh;
+    max-height:70vh;
+    height:auto;
 
     padding:50px;
 
@@ -174,3 +177,40 @@ h1{
     line-height:2;
 
 }
+
+@media (max-width:768px){
+
+    h1{
+        font-size:48px;
+    }
+
+    .subtitle{
+        font-size:18px;
+        text-align:center;
+        padding:0 20px;
+    }
+
+    .paper{
+        width:95%;
+        font-size:17px;
+        padding:0 20px;
+    }
+
+    .paper.open{
+        padding:25px;
+        max-height:65vh;
+    }
+
+    #letterText{
+        font-size:18px;
+        line-height:1.8;
+    }
+
+    #readBtn,
+    #continueBtn{
+        width:90%;
+        max-width:320px;
+        font-size:18px;
+    }
+}
+}    
