@@ -68,11 +68,11 @@ const reasons = [
 
 "♾️I love that even after every misunderstanding, my heart still chooses u.",
 
-"🫶I love the way u make me feel seen, valued, and deeply loved.",
+"❤️‍🩹And finally...🌎✨",
 
-"🌹I love u not because u're perfect, but because u're perfectly u. And i wouldn't change that for anything.",
+"i love u because somehow. ",
 
-"❤️‍🩹And finally...🌎✨i love u because somehow, out of billions of people in this world, my heart looked at u and quietly said...This is my home🏡❤️.This is my peace🫂🤍.This is my person🥹💍.This is the man i'll choose again and again♾️❤️ I LOVE U NANNA💓💓",
+"out of billions of people in this world, my heart looked at u and quietly said...This is my home🏡❤️.This is my peace🫂🤍.This is my person🥹💍.This is the man i'll choose again and again♾️❤️ I LOVE U NANNA💓💓",
 
 ];
 
