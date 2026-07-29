@@ -8,21 +8,18 @@ body{
     font-family:'Poppins',sans-serif;
     background:linear-gradient(to bottom,#02142d,#062b57,#0b4ea2);
     color:white;
-    overflow:hidden;
-    height:100vh;
-    body{
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(to bottom,#02142d,#062b57,#0b4ea2);
-    color:white;
-    overflow:hidden;
-}
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    min-height:100vh;
 }
 
 .overlay{
     position:fixed;
     inset:0;
     background:rgba(0,0,40,.25);
+    pointer-events:none;
 }
 
 #stars{
@@ -46,19 +43,21 @@ body{
     border-radius:50%;
     background:#f5f5dc;
     box-shadow:0 0 60px rgba(255,255,220,.8);
+    z-index:0
 }
 
 .reasons-page{
-    position:fixed;
-    inset:0;
+    position:relative;
+    z-index:2;
+
+    min-height:100vh;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    text-align:center;
-    z-index:2;
+    padding:40px 20px 80px;
 }
 
 h1{
@@ -131,4 +130,28 @@ button:hover{
 from{opacity:.3;}
 to{opacity:1;}
 
+}
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+#nextBtn,
+#continueBtn{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#ff5c8d;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#nextBtn:hover,
+#continueBtn:hover{
+    transform:scale(1.08);
 }
