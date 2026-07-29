@@ -12,13 +12,40 @@ html,body{
 }
 
 body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#02142d,#062b57,#0b4ea2);
 
-    background:linear-gradient(to bottom,#010814,#021a3d,#063b82);
+    overflow-x:hidden;
+    overflow-y:auto;
 
-    color:white;
-
+    min-height:100vh;
 }
 
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,40,.25);
+    pointer-events:none;
+}
+
+#stars{
+    position:fixed;
+    inset:0;
+    z-index:0;
+}
+
+.final-page{
+    position:relative;
+    z-index:2;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:60px 20px 120px;
+}
 /* =========================
    STARS
 ========================= */
@@ -61,23 +88,7 @@ body{
 
     }
 
-}
-
-/* =========================
-   OVERLAY
-========================= */
-
-.overlay{
-
-    position:fixed;
-    inset:0;
-
-    background:rgba(0,0,30,.25);
-
-    z-index:1;
-
-}
-
+}    
 /* =========================
    MOON
 ========================= */
@@ -682,4 +693,18 @@ text-shadow:0 0 20px rgba(255,255,255,.8);
 
 z-index:500;
 
+}
+
+button{
+    position:relative;
+    z-index:10;
+    cursor:pointer;
+}
+
+.reason-card,
+.timeline-card,
+.cake-container,
+.final-container{
+    position:relative;
+    z-index:2;
 }
